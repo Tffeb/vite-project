@@ -1,6 +1,9 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs 'NodeJS 20.6.0' // 使用 Node.js 工具
+    }
     stages {
         stage('Checkout') {
             steps {
@@ -25,11 +28,11 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            // 清理工作目录或执行其他清理操作
-            cleanWs()
-        }
-    }
+    // post {
+    //     always {
+    //         // 清理工作目录或执行其他清理操作
+    //         cleanWs()
+    //     }
+    // }
 }
 
