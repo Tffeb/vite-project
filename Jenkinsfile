@@ -23,7 +23,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 // 导航到构建后的前端项目目录
-                sh 'http-server -p 8080'
+                sh 'npm install -g http-server'
+                sh 'http-server -p 8000'
             }
         }
     }
