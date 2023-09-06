@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        nodejs 'NodeJS 20.6.0' // 使用 Node.js 工具
+        nodejs 'nodejs 20' // 使用 Node.js 工具
     }
     stages {
         stage('Checkout') {
